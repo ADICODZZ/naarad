@@ -1,0 +1,6 @@
+{
+  "name": "WhatsApp Hyper-Personalized Updates",
+  "description": "An onboarding flow for a service that delivers hyper-personalized WhatsApp updates for sports, news, social content, movies, and more. Users can log in, select content preferences, set update frequency, and manage their settings.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatsApp Personalized Updates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#25D366', // WhatsApp Green
+              'primary-dark': '#1EB358',
+              'primary-darker': '#128C7E', 
+              'primary-light': '#DCF8C6', 
+              'primary-lighter': '#EFFFF4',
+              'primary-lightest': '#F6FFF8', // New very light green
+              secondary: '#075E54', // Darker WhatsApp Teal
+              'secondary-light': '#34B7F1', // WhatsApp blue for links/timestamps
+              accent: '#ECE5DD', // WhatsApp chat background
+              lightgray: '#F7FAFC', // Off-white for backgrounds (new body bg)
+              mediumgray: '#E2E8F0',
+              darkgray: '#A0AEC0',
+              // More accent colors for tags
+              'accent-blue': '#3B82F6',
+              'accent-blue-light': '#DBEAFE',
+              'accent-pink': '#EC4899',
+              'accent-pink-light': '#FCE7F3',
+              'accent-purple': '#8B5CF6',
+              'accent-purple-light': '#F5F3FF',
+              'accent-orange': '#F97316',
+              'accent-orange-light': '#FFF7ED',
+              'accent-teal': '#14B8A6',
+              'accent-teal-light': '#F0FDFA',
+              // Semantic text colors for accent backgrounds
+              'text-orange-700': '#C2410C', // Example for accent-orange-light
+              'text-pink-700': '#BE185D',   // Example for accent-pink-light
+              'text-purple-700': '#7C3AED', // Example for accent-purple-light
+              'text-teal-700': '#0D9488',   // Example for accent-teal-light
+              'text-blue-700': '#1D4ED8',    // Example for accent-blue-light
+              'text-green-800': '#166534', // For very light green like primary-lightest
+            },
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            boxShadow: {
+              'subtle': '0 2px 4px 0 rgba(0,0,0,0.05)',
+              'card': '0 4px 12px 0 rgba(0,0,0,0.1)',
+              'interactive': '0 0 0 3px rgba(37, 211, 102, 0.3)', 
+              'tag': '0 2px 5px rgba(0,0,0,0.1)',
+              'tag-selected': '0 0 0 2px #25D366, 0 3px 7px rgba(0,0,0,0.25)', // Enhanced selected tag shadow
+              'xl-dark': '0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.08)',
+            },
+            transitionProperty: {
+              'height': 'height',
+              'spacing': 'margin, padding',
+              'width': 'width',
+              'bg': 'background-color',
+              'shadow': 'box-shadow',
+              'transform': 'transform',
+              'opacity': 'opacity',
+            },
+            transitionTimingFunction: {
+              'ease-out-quad': 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: theme('colors.lightgray'); /* Standardized light gray background */
+      }
+      .clickable {
+        cursor: pointer;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: theme('colors.mediumgray'); /* Subtle track, more neutral */
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: theme('colors.primary'); 
+        border-radius: 10px;
+        border: 2px solid theme('colors.mediumgray'); /* Track color border for padding effect */
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: theme('colors.primary-dark');
+      }
+
+      /* Page Transition Animation */
+      @keyframes pageFadeEnter {
+        from {
+          opacity: 0;
+          transform: translateY(15px); /* Slightly more noticeable slide */
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .page-fade-enter {
+        animation: pageFadeEnter 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; /* Smoother easing */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.1",
+    "@google/genai": "https://esm.sh/@google/genai@^1.0.1",
+    "@/": "./"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="text-gray-800">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
