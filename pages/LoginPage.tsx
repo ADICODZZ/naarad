@@ -156,12 +156,12 @@ const LoginPage: React.FC = () => {
           </div>
 
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Button variant="outline" className="w-full border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 !py-3" onClick={() => handleSocialLogin('Google')}>
+            {/* <Button variant="outline" className="w-full border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 !py-3" onClick={() => handleSocialLogin('Google')}>
               {ICONS.GOOGLE} Google
             </Button>
             <Button variant="outline" className="w-full border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 !py-3" onClick={() => handleSocialLogin('Apple')}>
              {ICONS.APPLE} Apple
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

@@ -97,7 +97,7 @@ const LandingPage: React.FC = () => {
       navigate(PagePath.DASHBOARD, { replace: true });
     }
   }, [preferences, navigate]);
-  
+
   const [email, setEmail] = useState(preferences.email || '');
   const [whatsappNumber, setWhatsappNumber] = useState(preferences.whatsappNumber || '');
   const [emailError, setEmailError] = useState('');
@@ -340,23 +340,23 @@ const LandingPage: React.FC = () => {
                 We use your WhatsApp number to deliver personalized updates. Standard rates may apply.
               </p>
 
-              <Button type="submit" variant="primary" size="lg" className="w-full !py-3.5 shadow-lg hover:shadow-glow-primary transform hover:scale-105">
+              <Button type="submit" variant="primary" size="lg" className="w-full mt-8 !py-3.5 shadow-lg hover:shadow-glow-primary transform hover:scale-105">
                 Continue to Personalization {ICONS.ARROW_RIGHT}
               </Button>
             </form>
 
-            <div className="mt-10">
-              <div className="relative">
+            <div className="">
+              {/* <div className="relative">
                 <div className="absolute inset-0 flex items-center">
                   <div className="w-full border-t border-white/20" />
                 </div>
                 <div className="relative flex justify-center text-sm">
                   <span className="px-3 bg-gray-900 text-primary-lighter/80 font-medium rounded-md">Or continue with</span>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                 <Button 
+              
+                 {/* <Button 
                     variant="outline" 
                     className="w-full border-white/30 text-white hover:bg-white/10 hover:border-primary !py-3 transform hover:scale-105" 
                     onClick={() => handleSocialLogin('Google')}
@@ -369,8 +369,8 @@ const LandingPage: React.FC = () => {
                     onClick={() => handleSocialLogin('Apple')}
                 >
                   {ICONS.APPLE} Apple
-                </Button>
-              </div>
+                </Button> */}
+              
             </div>
           </div>
         </div>
