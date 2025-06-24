@@ -90,6 +90,14 @@ const HowItWorksStep: React.FC<{ icon: React.ReactNode; title: string; descripti
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
   const { preferences, updatePreference, setPreferences } = usePreferences();
+
+   useEffect(() => {
+    const isAuthenticated = preferences.email !== '' && preferences.whatsappNumber !== '';
+    if (isAuthenticated) {
+      navigate(PagePath.DASHBOARD, { replace: true });
+    }
+  }, [preferences, navigate]);
+  
   const [email, setEmail] = useState(preferences.email || '');
   const [whatsappNumber, setWhatsappNumber] = useState(preferences.whatsappNumber || '');
   const [emailError, setEmailError] = useState('');
