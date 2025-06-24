@@ -9,7 +9,7 @@ export const SECONDARY_COLOR = "bg-teal-500";
 export const SECONDARY_HOVER_COLOR = "hover:bg-teal-600";
 
 export const PagePath = {
-  LOGIN: '/login',
+  LANDING: '/', // Changed from LOGIN and set to root
   INTERESTS: '/interests',
   FREQUENCY: '/frequency',
   REVIEW: '/review',
@@ -86,7 +86,7 @@ export const WHATSAPP_PREVIEW_TIME = (): string => {
 
 export const EXAMPLE_NOTIFICATIONS: Record<string, SampleMessage> = {
   DEFAULT: {
-    summaryText: "Welcome! Select an interest to see a personalized sample update.",
+    summaryText: "Welcome! Select an interest to see a personalized sample update, or explore how our service works.",
     imageUrl: "✨", 
     actionText: "Learn More"
   },

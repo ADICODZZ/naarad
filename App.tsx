@@ -1,11 +1,12 @@
 import React from 'react';
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
-import LoginPage from './pages/LoginPage';
+import LandingPage from './pages/LandingPage'; // Changed from LoginPage
 import InterestSelectionPage from './pages/InterestSelectionPage';
 import FrequencySettingsPage from './pages/FrequencySettingsPage';
 import ReviewConfirmPage from './pages/ReviewConfirmPage';
 import DashboardPage from './pages/DashboardPage';
 import { usePreferences } from './contexts/PreferencesContext';
+import { PagePath } from './constants';
 
 const App: React.FC = () => {
   const { preferences } = usePreferences();
@@ -15,26 +16,26 @@ const App: React.FC = () => {
     <HashRouter>
       <div className="min-h-screen flex flex-col">
         <Routes>
-          <Route path="/login" element={<LoginPage />} />
+          <Route path={PagePath.LANDING} element={<LandingPage />} /> 
           <Route 
-            path="/interests" 
-            element={isAuthenticated ? <InterestSelectionPage /> : <Navigate to="/login" />} 
+            path={PagePath.INTERESTS} 
+            element={isAuthenticated ? <InterestSelectionPage /> : <Navigate to={PagePath.LANDING} />} 
           />
           <Route 
-            path="/frequency" 
-            element={isAuthenticated ? <FrequencySettingsPage /> : <Navigate to="/login" />} 
+            path={PagePath.FREQUENCY} 
+            element={isAuthenticated ? <FrequencySettingsPage /> : <Navigate to={PagePath.LANDING} />} 
           />
           <Route 
-            path="/review" 
-            element={isAuthenticated ? <ReviewConfirmPage /> : <Navigate to="/login" />} 
+            path={PagePath.REVIEW} 
+            element={isAuthenticated ? <ReviewConfirmPage /> : <Navigate to={PagePath.LANDING} />} 
           />
           <Route 
-            path="/dashboard" 
-            element={isAuthenticated ? <DashboardPage /> : <Navigate to="/login" />} 
+            path={PagePath.DASHBOARD} 
+            element={isAuthenticated ? <DashboardPage /> : <Navigate to={PagePath.LANDING} />} 
           />
           <Route 
             path="*" 
-            element={<Navigate to={isAuthenticated ? "/dashboard" : "/login"} />} 
+            element={<Navigate to={isAuthenticated ? PagePath.DASHBOARD : PagePath.LANDING} />} 
           />
         </Routes>
       </div>
