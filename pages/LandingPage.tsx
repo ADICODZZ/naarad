@@ -222,7 +222,7 @@ const LandingPage: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start mb-4 wow animate__animated animate__fadeInDown" data-wow-delay="0s">
-                <span className="inline-flex items-center justify-center p-3 mr-3 bg-primary text-white rounded-2xl shadow-2xl ring-4 ring-primary/30">
+                <span className="inline-flex items-center justify-center p-3   text-white  shadow-2xl ring-primary/30">
                   {ICONS.WHATSAPP_LOGO}
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary tracking-wide">

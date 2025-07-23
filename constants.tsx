@@ -63,10 +63,7 @@ export const ICONS = {
     </svg>
   ),
   WHATSAPP_LOGO: ( 
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M21 11.5C21 16.7467 16.7467 21 11.5 21C10.573 21 9.68403 20.8543 8.85273 20.5817L3 22L4.41827 16.1473C4.14572 15.316 4 14.427 4 13.5C4 8.25329 8.25329 4 13.5 4C18.7467 4 23 8.25329 23 13.5C23 14.9338 22.6243 16.2648 21.9668 17.4183M21 11.5C21 10.7941 20.8805 10.1069 20.6587 9.45707" />
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 11H9.01M12 11H12.01M15 11H15.01" strokeWidth="2.5" />
-    </svg>
+   <img src="../assets/icon.png" alt="WhatsApp Logo" className="w-8 h-8" />
   )
 };
 
