@@ -63,7 +63,7 @@ export const ICONS = {
     </svg>
   ),
   WHATSAPP_LOGO: ( 
-   <img src="../assets/icon.png" alt="WhatsApp Logo" className="w-8 h-8" />
+   <img src="../icons/icon.png" alt="WhatsApp Logo" className="w-8 h-8" />
   )
 };
 
